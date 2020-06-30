@@ -9,6 +9,14 @@
 body {
   font-family: 'Roboto Mono', monospace;
   background: #1D3557;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .navbar {
@@ -75,12 +83,21 @@ body {
   border: 0;
   outline: none;
   border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
-#main-btn {
+.navbar .settings-box .btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.navbar #main-btn {
   width: 150px;
   height: 70px;
-  background: #1D3557;
+  background: #457B9D;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -92,19 +109,59 @@ body {
   top: 115px;
   left: 50%;
   margin-left: -75px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.navbar #main-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.9;
 }
 
 #main {
   width: 100vw;
-  height: 80vh;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url(/img/background.svg);
+  background-size: 100vw, 90vh;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar .settings-box .left-nav {
+    padding-left: 10px;
+  }
+  .navbar .settings-box .right-nav {
+    padding-right: 10px;
+  }
+  .navbar .settings-box .btn-text {
+    font-size: 1rem;
+  }
+  .navbar .settings-box .btn {
+    width: 80px;
+    height: 40px;
+    background: #F1FAEE;
+    color: #1D3557;
+    font-size: 1rem;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

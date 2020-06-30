@@ -66,7 +66,7 @@ function Cell(i, j) {
     //color visited cells
     if (this.visited) {
       noStroke();
-      fill(255, 200, 200);
+      fill(241, 250, 238);
       rect(x, y, w, w, );
     }
   }

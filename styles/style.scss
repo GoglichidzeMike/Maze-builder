@@ -16,6 +16,10 @@ body {
   font-family: 'Roboto Mono',
     monospace;
   background: $primary_color;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -43,7 +47,6 @@ body {
       align-items: center;
       min-height: 150px;
       padding: 20px 90px;
-
     }
 
     .btn-text {
@@ -60,28 +63,38 @@ body {
       border: 0;
       outline: none;
       border-radius: 5px;
+      cursor: pointer;
+      transition: all .3s ease-out;
+
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.9;
+      }
+    }
+  }
+
+  #main-btn {
+    width: 150px;
+    height: 70px;
+    background: $secondary_color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+    color: $btn_color;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    margin-left: -75px;
+    transition: all .3s ease-out;
+
+    &:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
     }
   }
 }
-
-
-#main-btn {
-  width: 150px;
-  height: 70px;
-  background: $primary_color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  border: 0;
-  outline: none;
-  color: $btn_color;
-  font-size: 1.8rem;
-  position: absolute;
-
-  top: 115px;
-  left: 50%;
-  margin-left: -75px;
-}
-
 
 
 
@@ -93,8 +106,50 @@ body {
 
 #main {
   width: 100vw;
-  height: 80vh;
+  flex-grow: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url(/img/background.svg);
+  background-size: 100vw, 90vh;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  .navbar {
+    .settings-box {
+      .left-nav {
+        padding-left: 10px;
+      }
+
+      .right-nav {
+        padding-right: 10px;
+      }
+
+
+
+      .btn-text {
+        font-size: 1rem;
+
+      }
+
+      .btn {
+        width: 80px;
+        height: 40px;
+        background: $btn_color;
+        color: $primary_color;
+        font-size: 1rem;
+        border: 0;
+        outline: none;
+        border-radius: 5px;
+      }
+    }
+  }
+
+
+
 }
