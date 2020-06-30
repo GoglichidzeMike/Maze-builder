@@ -111,6 +111,7 @@ body {
   margin-left: -75px;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
+  cursor: pointer;
 }
 
 .navbar #main-btn:hover {

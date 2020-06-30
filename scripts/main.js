@@ -1,6 +1,7 @@
 let cols, rows
 //row size constant
 
+let starter = false;
 
 let w = 60;
 let fRate = 50;
@@ -10,8 +11,24 @@ let grid = [];
 let stack = [];
 
 $(document).ready(function () {
-
   console.log($('speed').val());
+
+
+  $("#main-btn").click(function () {
+    if (starter == false) {
+      clear();
+      starter = !starter
+      $('#main-btn').html('reset')
+    } else if (starter == true) {
+      starter = !starter;
+      grid = []
+      stack = []
+      current;
+      clear();
+      reset()
+      $('#main-btn').html('generate')
+    }
+  })
 
 });
 
@@ -21,6 +38,11 @@ $(document).ready(function () {
 function setup() {
   let canvas = createCanvas(600, 600);
   canvas.parent('sketch-holder');
+  reset();
+}
+
+
+function reset() {
 
   cols = floor(width / w);
   rows = floor(height / w);
@@ -52,26 +74,28 @@ function draw() {
   current.visited = true;
   current.highlight();
 
+  if (starter) {
+    // STEP 1
+    let next = current.checkNeighbors();
+    if (next) {
+      next.visited = true;
 
-  // STEP 1
-  let next = current.checkNeighbors();
-  if (next) {
-    next.visited = true;
-
-    //STEP 2
-    stack.push(current);
-
-
-    // STEP 3
-
-    removeWalls(current, next);
+      //STEP 2
+      stack.push(current);
 
 
-    // STEP 4
-    current = next;
-  } else if (stack.length > 0) {
-    current = stack.pop();
+      // STEP 3
+
+      removeWalls(current, next);
+
+
+      // STEP 4
+      current = next;
+    } else if (stack.length > 0) {
+      current = stack.pop();
+    }
   }
+
 
 }
 

@@ -88,6 +88,7 @@ body {
     left: 50%;
     margin-left: -75px;
     transition: all .3s ease-out;
+    cursor: pointer;
 
     &:hover {
       transform: scale(1.1);
