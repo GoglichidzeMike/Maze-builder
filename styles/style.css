@@ -138,7 +138,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("./maze-builder/img/background.svg");
+  background-image: url("https://goglichidzemike.github.io/maze-builder/img/background.svg");
   background-size: 100vw, 90vh;
   background-repeat: no-repeat;
   background-position: left bottom;
