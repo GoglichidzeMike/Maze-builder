@@ -1,0 +1,44 @@
+.menu-container {
+  background: $main-color;
+  padding: 0 10%;
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 2px solid black;
+
+  -webkit-box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.settings-box {
+  background: $secondary-color;
+  min-height: 100%;
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+.controls-box {
+  background: $secondary-color;
+  min-height: 100%;
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}

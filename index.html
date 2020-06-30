@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+  <script type="text/javascript" src="./scripts/main.js"></script>
+  <script type="text/javascript" src="./scripts/cell.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>Maze Design</title>
+</head>
+
+<body>
+  <div class="menu-container">
+
+    <div class="settings-box">
+      <label for="size">Size: (between 10 and 60):</label>
+      <input type="range" value="20" id="size" step="10" name="size" min="10" max="60">
+
+
+      <label for="speed">Speed: (between 1 and 100):</label>
+      <input type="range" value="10" id="speed" step="10" name="speed" min="10" max="100">
+    </div>
+
+    <div class="logo">
+      <img src="/img/logo.png" alt="logo">
+    </div>
+
+    <div class="controls-box">
+      <button class="button" id="button1">Start</button>
+      <button class="button" id="button2">Reset</button>
+    </div>
+
+  </div>
+
+  <div id="main">
+    <div id="sketch-holder">
+    </div>
+  </div>
+
+</body>
+
+</html>
