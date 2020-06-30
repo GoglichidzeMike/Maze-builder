@@ -14,26 +14,30 @@
 </head>
 
 <body>
-  <div class="menu-container">
+  <div class="navbar">
 
     <div class="settings-box">
-      <label for="size">Size: (between 10 and 60):</label>
-      <input type="range" value="20" id="size" step="10" name="size" min="10" max="60">
-
-
-      <label for="speed">Speed: (between 1 and 100):</label>
-      <input type="range" value="10" id="speed" step="10" name="speed" min="10" max="100">
+      <div class="left-nav">
+        <p class="btn-text">select_size:</p>
+        <div class="buttons">
+          <button class="btn">10x10</button>
+          <button class="btn">20x20</button>
+          <button class="btn">40x40</button>
+        </div>
+      </div>
+      <div class="right-nav">
+        <p class="btn-text">select_speed:</p>
+        <div class="buttons">
+          <button class="btn">slow</button>
+          <button class="btn">medium</button>
+          <button class="btn">fast</button>
+        </div>
+      </div>
     </div>
 
-    <div class="logo">
-      <img src="/img/logo.png" alt="logo">
-    </div>
-
-    <div class="controls-box">
-      <button class="button" id="button1">Start</button>
-      <button class="button" id="button2">Reset</button>
-    </div>
-
+  </div>
+  <div class="main-button">
+    <button id="main-btn">generate</button>
   </div>
 
   <div id="main">

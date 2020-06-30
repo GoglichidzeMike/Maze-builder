@@ -1,10 +1,9 @@
-$main-color: lightblue;
-$secondary-color: lightgreen;
+$menu_color: #E63946;
+$btn_color: #F1FAEE;
+$primary_color: #1D3557;
+$secondary_color: #457B9D;
 
-@import 'header';
-@import 'input';
-@import 'button';
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 
 * {
@@ -12,6 +11,84 @@ $secondary-color: lightgreen;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Roboto Mono',
+    monospace;
+  background: $primary_color;
+}
+
+.navbar {
+  width: 100%;
+  background: $menu_color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+
+  .settings-box {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .left-nav,
+    .right-nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      min-height: 150px;
+      padding: 20px 90px;
+
+    }
+
+    .btn-text {
+      font-size: 1.5rem;
+      color: $primary_color
+    }
+
+    .btn {
+      width: 100px;
+      height: 50px;
+      background: $btn_color;
+      color: $primary_color;
+      font-size: 1.5rem;
+      border: 0;
+      outline: none;
+      border-radius: 5px;
+    }
+  }
+}
+
+
+#main-btn {
+  width: 150px;
+  height: 70px;
+  background: $primary_color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  color: $btn_color;
+  font-size: 1.8rem;
+  position: absolute;
+
+  top: 115px;
+  left: 50%;
+  margin-left: -75px;
+}
+
+
+
+
+
+
+
+
 
 
 #main {
