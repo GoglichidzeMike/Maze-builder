@@ -144,6 +144,10 @@ body {
   background-position: left bottom;
 }
 
+#main #sketch-holder {
+  opacity: 0;
+}
+
 @media screen and (max-width: 1000px) {
   .navbar .settings-box .left-nav {
     padding-left: 10px;

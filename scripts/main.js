@@ -19,6 +19,7 @@ function setup() {
 
 
 function resetValues() {
+  $("#sketch-holder").css("opacity", 0)
   starter = false;
   $('#main-btn').html('generate')
   grid = []
@@ -26,6 +27,17 @@ function resetValues() {
   current;
   clear();
   reset()
+
+  $("#sketch-holder").animate({
+      opacity: 0
+    },
+    200,
+    function () {
+      $(this).animate({
+        opacity: 1
+      }, 200);
+    }
+  );
 }
 
 

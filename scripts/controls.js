@@ -42,4 +42,19 @@ $(document).ready(function () {
     }
   })
 
+
+
+
+  $("#sketch-holder").animate({
+      opacity: 0
+    },
+    500,
+    function () {
+      $(this).animate({
+        opacity: 1
+      }, 200);
+    }
+  );
+
+
 });
