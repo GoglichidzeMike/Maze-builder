@@ -90,13 +90,12 @@ function draw() {
     }
 
     if (stack.length === 0) {
+
       setTimeout(function () {
         noLoop();
       }, 100);
     }
   }
-
-
 }
 
 
