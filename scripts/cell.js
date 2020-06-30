@@ -67,7 +67,13 @@ function Cell(i, j) {
     if (this.visited) {
       noStroke();
       fill(241, 250, 238);
-      rect(x, y, w, w, );
+      rect(x, y, w, w);
+    }
+
+    if (this.visited && this.i == cols - 1 && this.j == cols - 1) {
+      noStroke();
+      fill(230, 57, 70);
+      rect(x, y, w, w);
     }
   }
 }

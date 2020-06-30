@@ -4,41 +4,28 @@ let cols, rows
 let starter = false;
 
 let w = 60;
-let fRate = 50;
+let fRate = 25;
 //grids empty array
 let current;
 let grid = [];
 let stack = [];
-
-$(document).ready(function () {
-  console.log($('speed').val());
-
-
-  $("#main-btn").click(function () {
-    if (starter == false) {
-      clear();
-      starter = !starter
-      $('#main-btn').html('reset')
-    } else if (starter == true) {
-      starter = !starter;
-      grid = []
-      stack = []
-      current;
-      clear();
-      reset()
-      $('#main-btn').html('generate')
-    }
-  })
-
-});
-
-
 
 //setup function creates canvas, defines assigns ros and cols amounts.
 function setup() {
   let canvas = createCanvas(600, 600);
   canvas.parent('sketch-holder');
   reset();
+}
+
+
+function resetValues() {
+  starter = false;
+  $('#main-btn').html('generate')
+  grid = []
+  stack = []
+  current;
+  clear();
+  reset()
 }
 
 
@@ -62,14 +49,12 @@ function reset() {
 }
 
 
-
 //draws 100 cells onto the canvas
 function draw() {
   background(50);
   for (let i = 0; i < grid.length; i++) {
     grid[i].show();
   }
-
 
   current.visited = true;
   current.highlight();
@@ -83,16 +68,19 @@ function draw() {
       //STEP 2
       stack.push(current);
 
-
       // STEP 3
-
       removeWalls(current, next);
-
 
       // STEP 4
       current = next;
     } else if (stack.length > 0) {
       current = stack.pop();
+    }
+
+    if (stack.length === 0) {
+      setTimeout(function () {
+        noLoop();
+      }, 100);
     }
   }
 
